@@ -58,7 +58,29 @@
                     </header>
 
                     <main class="mt-6">
-                        <input type="file" id="fileInput">
+
+                        <div id="loader" class="hidden">Loading...</div>
+
+                        <input type="file" id="fileInput" />
+
+                        <div class="mt-4">
+                            <div class="relative pt-1">
+                                <div class="flex mb-2 items-center justify-between">
+                                    <div>
+                                        <span class="text-xs font-semibold inline-block text-teal-600 uppercase last:mr-0 mr-2">
+                                            Upload Process: &nbsp;
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span id="progressPercentage" class="text-xs font-semibold inline-block text-teal-600 uppercase">0%</span>
+                                    </div>
+                                </div>
+                                <div class="flex h-2 mb-4 overflow-hidden bg-gray-200 rounded">
+                                    <div id="progressBar" class="flex flex-col text-center text-white bg-teal-500 shadow-none whitespace-nowrap transition-all duration-500 ease-in-out" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+
                     </main>
 
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
